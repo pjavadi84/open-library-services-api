@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import '../styling/BookRecommendations.css'
 
 function BookRecommendations() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
     // May need to adjust later the endpoint as needed if I deploy my API somewhere else
-    fetch('http://localhost:3000/recommendations?query=Ruby')
+    fetch(`${process.env.REACT_APP_API_URL}/recommendations?query=Ruby`)
       .then(response => response.json())
       .then(data => setBooks(data.slice(0, 10))); // Limit to 10 books for simplicity
   }, []);

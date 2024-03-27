@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import BookRecommendations from './BookRecommendations';
+import BookRecommendations from './book_recommendations/BookRecommendations';
 
 
 function App() {
@@ -9,9 +8,8 @@ function App() {
       <header className="App-header">
         
       </header>
-      <body>
-        <BookRecommendations />
-      </body>
+     
+      <BookRecommendations />
     </div>
   );
 }
